@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head><style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+	<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<center>
+<table>
+    <tr>
+        <th>Duration</th>
+        <th>Equipment Specification</th>
+        <th>Equipment Type</th>
+        <th>Lower Frequency</th>
+        <th>Upper frequency</th>
+    </tr>
+    {% for item in logs %}
+    <tr> 
+        <td>{{ item.duration }}</td>
+        <td>{{ item.espec }}</td>
+        <td>{{ item.etype }}</td>
+        <td>{{ item.flower }}</td>
+        <td>{{ item.fupper }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</center>
+</body>
+</html>
